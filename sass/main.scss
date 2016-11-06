@@ -1,0 +1,17 @@
+/* 
+	Radio Widget
+	Author: Magdalena Fas
+	Version: 0.0.1
+*/
+
+/* BASE - Base styles, variables, mixins, etc. */
+
+@import "base/_variables.scss"; 
+@import "base/_mixins.scss";
+@import "base/_base.scss";
+
+/* LAYOUT - Page layout styles */
+
+@import "layouts/_header.scss";
+@import "layouts/_sections.scss";
+@import "layouts/_footer.scss";

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Radio Widget</title>
+		<meta name="description" content="">
+		
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+
+	<body>
+		<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<div class="widget">
+			<div class="widget-header">
+				<button class="btn" id="btn-back"></button>
+				<div class="header-title">Stations</div>
+				<button class="btn" id="btn-logout"></button>
+			</div>
+			<div class="widget-footer">
+				<p>Currently playing</p>
+				<p class="station-current"></p>
+			</div>
+		</div>
+
+	<!--
+		.widget
+		  .widget-header
+		    %button.btn#btn-back
+		    .header-title Stations
+		    %button.btn#btn-logout 
+		  .widget-footer
+		    %p Currently playing
+		    %p.station-current
+	-->
+		
+		<script src="lib/js/jquery-2.1.3.min.js"></script>
+	    <script type="text/javascript" src="js/script.js"></script>
+	</body>
+</html>

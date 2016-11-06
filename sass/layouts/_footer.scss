@@ -1,0 +1,30 @@
+/* FOOTER */
+
+.widget-footer {
+  position: relative;
+  width: 100%;
+  min-height: 74px;
+  text-align: center;
+  padding: 1rem 0 1rem;
+  background-color: $bg-tertiary;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+  border-top: 1px solid rgba($txt-primary, 0.5);
+  * {
+    display: none;
+    margin: 0 auto;
+    &.show {
+      display: block;
+    }
+  }
+  p:first-child {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $accent;
+  }
+  .station-current {
+    font-size: 1.35rem;
+    opacity: 0.9;
+  }
+}

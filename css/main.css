@@ -1,0 +1,247 @@
+/* 
+	Radio Widget
+	Author: Magdalena Fas
+	Version: 0.0.1
+*/
+/* BASE - Base styles, variables, mixins, etc. */
+/* VARIABLES */
+/* colour scheme */
+/* media */
+/* MIXINS */
+/* GENERAL STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  background-color: #20202B;
+  color: #A3ACBE;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400; }
+
+button {
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out; }
+  button:hover {
+    opacity: 0.5; }
+
+.widget {
+  position: relative;
+  margin: 10vh auto;
+  width: 90vw;
+  min-width: 300px;
+  min-height: 440px;
+  -webkit-border-radius: 15px;
+          border-radius: 15px;
+  -webkit-box-shadow: 0 25px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.3); }
+  @media (min-width: 500px) {
+    .widget {
+      width: 40vw; } }
+  @media (min-width: 740px) {
+    .widget {
+      max-width: 350px; } }
+
+/* LAYOUT - Page layout styles */
+/* HEADER */
+.widget-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -mozflex-direction: row;
+  -webkit-flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 100%;
+  height: 15%;
+  background-color: #EEAE61;
+  color: #FFFFFF;
+  -webkit-border-top-left-radius: inherit;
+          border-top-left-radius: inherit;
+  -webkit-border-top-right-radius: inherit;
+          border-top-right-radius: inherit;
+  padding: 1rem 8%; }
+  .widget-header .btn {
+    cursor: pointer; }
+    .widget-header .btn#btn-back {
+      width: 20px;
+      height: 20px;
+      border-left: 2px solid #FFFFFF;
+      border-bottom: 2px solid #FFFFFF;
+      -ms-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+         transform: rotate(45deg); }
+    .widget-header .btn#btn-logout {
+      width: 32px;
+      height: 38px;
+      background: url("https://raw.githubusercontent.com/netguru/junior-frontend-recruitment-task/master/imgs/switch.png") no-repeat;
+      background-size: cover;
+      -webkit-transform: scale(0.85);
+          -ms-transform: scale(0.85);
+           -o-transform: scale(0.85);
+              transform: scale(0.85); }
+  .widget-header .header-title {
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center; }
+
+/* LISTING */
+.listing-container {
+  height: 350px;
+  overflow: hidden;
+  position: relative; }
+
+.widget-listing {
+  position: absolute;
+  width: 330px;
+  width: -webkit-calc(100% + 20px);
+  width: calc(100% + 20px);
+  height: 100%;
+  right: -20px;
+  overflow-y: scroll;
+  padding: 5% 0;
+  background-color: #2D2D38; }
+  .widget-listing ul {
+    height: 100%;
+    list-style-type: none; }
+    .widget-listing ul li {
+      width: 80%;
+      margin: 0 10%; }
+      .widget-listing ul li .radio-station {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -mozflex-direction: row;
+        -webkit-flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+           -moz-box-orient: horizontal;
+           -moz-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+           -moz-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        border-bottom: 1px solid rgba(163, 172, 190, 0.2);
+        cursor: pointer; }
+        .widget-listing ul li .radio-station > div {
+          position: relative;
+          display: inline-block;
+          margin: 20px 0;
+          font-size: 1.23rem; }
+        .widget-listing ul li .radio-station .radio-station-frequency {
+          font-weight: 700; }
+      .widget-listing ul li:last-child .radio-station {
+        border-bottom: 0; }
+
+.radio-station-info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -mozflex-direction: row;
+  -webkit-flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 15px; }
+  .radio-station-info .btn-minus {
+    -webkit-transform: scale(0.55) translate(-25px, 0);
+        -ms-transform: scale(0.55) translate(-25px, 0);
+         -o-transform: scale(0.55) translate(-25px, 0);
+            transform: scale(0.55) translate(-25px, 0); }
+  .radio-station-info .btn-plus {
+    -webkit-transform: scale(0.55) translate(25px, 0);
+        -ms-transform: scale(0.55) translate(25px, 0);
+         -o-transform: scale(0.55) translate(25px, 0);
+            transform: scale(0.55) translate(25px, 0); }
+  .radio-station-info .poster-img {
+    width: 120px;
+    height: 120px; }
+    .radio-station-info .poster-img img {
+      width: 100%;
+      height: 100%;
+      -webkit-border-radius: 50%;
+              border-radius: 50%;
+      border: 2px solid #A3ACBE; }
+
+/* FOOTER */
+.widget-footer {
+  position: relative;
+  width: 100%;
+  min-height: 74px;
+  text-align: center;
+  padding: 1rem 0 1rem;
+  background-color: #22222B;
+  -webkit-border-bottom-left-radius: inherit;
+          border-bottom-left-radius: inherit;
+  -webkit-border-bottom-right-radius: inherit;
+          border-bottom-right-radius: inherit;
+  border-top: 1px solid rgba(163, 172, 190, 0.5); }
+  .widget-footer * {
+    display: none;
+    margin: 0 auto; }
+    .widget-footer *.show {
+      display: block; }
+  .widget-footer p:first-child {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #EEAE61; }
+  .widget-footer .station-current {
+    font-size: 1.35rem;
+    opacity: 0.9; }
